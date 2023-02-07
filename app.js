@@ -5,16 +5,22 @@ function iniciarApp(){
 
     const btn  = Array.from(botones);
 
-
     btn.forEach( boton => {
         boton.addEventListener('click', guardarValor);
     })
 
     function guardarValor(e) {
-        const btnValor = e.target.value;
+    const valorBoton = e.target.value;
 
-        console.log(btnValor);
+
+        imprimirValores(valorBoton);
     }
+
+    function imprimirValores(valor) {
+        valorAnterior.textContent += valor; 
+    }
+
+    
 
     
 
